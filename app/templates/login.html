@@ -1,0 +1,23 @@
+<div layout="column" layout-fill ng-controller="LoginController">
+    <div layout="row" layout-xs="column" layout-fill>
+        <div flex layout-fill>
+            <img src="http://goo.gl/aS7z3W" alt="Popayán" class="login-ing"/>
+        </div>
+        <div flex layout="column" layout-align="center center">
+            <img src="http://popayan.gov.co/sites/default/files/marca-popayan-principal.jpg" alt="Popayán" class="login-logo"/>
+            <form name="loginForm" style="width:60%">
+                <div layout="column" layout-align="center center">
+                    <md-input-container class="md-block">
+                        <label>Nombre de Usuario</label> 
+                        <input required name="username" ng-model="credentials.username" type="text">
+                    </md-input-container>
+                    <md-input-container class="md-block">
+                        <label>Contraseña</label>
+                        <input required name="password" ng-model="credentials.password" type="password">
+                    </md-input-container>
+                    <md-button ng-click = "login()" class="md-primary md-raised" >Ingresar</md-button>
+                </div>
+            </form> 
+        </div><
+    </div>
+</div>

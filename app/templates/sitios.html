@@ -1,0 +1,10 @@
+<div layout="row" layout-wrap>
+    <div flex="50" ng-repeat="s in sitios"> 
+        <md-card>
+            <img class="center-crop" ng-src="{{s.img}}" alt="Error" style="display:inline;"/>
+            <md-card-content style="display:inline;">
+                <h4 class="md-title">{{s.name}}</h4>
+            </md-card-content>
+        </md-card> 
+    </div>
+</div>

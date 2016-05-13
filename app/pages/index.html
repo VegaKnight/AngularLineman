@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html ng-app="app">
+    <head>
+        <base href="/"></base>
+        <title><%= pkg.name %></title>
+        <link rel="stylesheet" type="text/css" href="/css/app.css" media="all" />
+    </head>
+    <body ng-controller="LoginController">
+             
+        <div layout="row" layout-fill-flex>
+            <md-sidenav layout-fill class="md-sidenav-left md-whiteframe-z5" style="width:120%;overflow: hidden" 
+                        ng-show="showSidenav()" md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')">
+                <div layout="column">
+                    <div class="logo">
+                        <img src="http://goo.gl/yJUIFs" alt="Popayan" class="center-crop img-fondo"/>
+                        <img src="http://goo.gl/OCp8Ut" alt="Popayán" class="img-popayan"/>
+                    </div>
+                    <div class="div-padding">
+                        <md-button ng-click="close()" class="md-primary" hide-gt-md>Cerrar Sidenav </md-button>
+                    </div>
+                    <div class="div-padding div-sidenav">
+                        <md-button md-no-ink class="md-primary" ng-click="irIglesias()" style="display: inline" flex>Iglesias</md-button>
+                    </div>
+                    <div class="div-padding">
+                        <md-button md-no-ink class="md-prinary" ng-click="irSitios()" style="display: inline" flex>Sitios Turisticos</md-button>
+                    </div>
+                    <div class="div-padding">
+                        <md-button md-no-ink class="md-prinary" ng-click="irRestaurantes()" style="display: inline" flex>Restaurantes</md-button>
+                    </div>
+                    <div class="div-padding">
+                        <md-button md-no-ink class="md-prinary" ng-click="irClima()" style="display: inline" flex>Clima</md-button>
+                    </div>
+                </div>
+            </md-sidenav> 
+
+            <div layout="column" flex>
+                <md-toolbar class="md-whiteframe-z5" ng-show="showToolbar()">
+                    
+                    <div layout="md-toolbar-tools" flex>
+                        <md-button md-no-ink class="md-prinary" ng-click="menu()" style="display: inline" flex>Menu</md-button>
+                        <h2 class="md-display-1 toolbar-tittle" flex><span>{{toolbarTitle}}</span></h2>
+                        <span flex></span>
+                    </div>
+                </md-toolbar>
+                <div id="view" ng-view layout-fill flex style="margin-left: 0.2%"></div>
+            </div>
+        </div>
+        <script type="text/javascript" src="/js/app.js"></script>
+    </body>
+</html>

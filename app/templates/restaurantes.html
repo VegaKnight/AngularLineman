@@ -1,0 +1,15 @@
+<h1>{{resultado2}}</h1>
+
+<input type="button" ng-click="listar2()" name="name" value="consumir servicio post" >
+<input type="button" ng-click="listar()" name="name" value="consumir servicio" >
+
+<table border="3">
+  <tr ng-repeat = "x in resultado">
+    <td>
+      {{x.userId}}
+    </td>
+    <td>
+      {{x.title}}
+    </td>
+  </tr>
+</table>
